@@ -1,4 +1,4 @@
-name: Python Package
+name: Python package
 on: [push]
 jobs:
     build:
@@ -6,11 +6,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - names : Setup Python
+            - names: Setup Python
               uses: actions/setup-python@v4
               with:
                 python-version: "3.9"
-            - name: Install Packages
+            - name: Install packages
               run: pip install -r requirements.txt
             - name: Run tests
               run: python manage.py test
